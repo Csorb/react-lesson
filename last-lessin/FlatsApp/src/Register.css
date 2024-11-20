@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(175, 168, 168, 0.498), #555f62),
+    url("./flat.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.base-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 5rem;
+}
+.base-container .header {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 10rem;
+  filter: brightness(0.1);
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  position: relative;
+}
+.form .checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+}
+.click {
+  width: 2rem;
+  height: 1.3rem;
+}
+.form .form-group label {
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 600;
+  pointer-events: none;
+  transition: top 0.5s ease, transform 0.5s ease;
+  bottom: 0.2rem;
+}
+.form .form-group input:focus + label,
+.form .form-group input:valid + label {
+  top: 0.6rem;
+  font-size: 0.75rem;
+}
+.input-box input[type="email"] + label {
+  top: 0.6rem;
+  font-size: 0.75rem;
+}
+.form .form-group input {
+  margin-top: 0.5rem;
+  min-width: 15rem;
+  height: 1.5rem;
+  padding: 0rem 0.8rem;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+  transition: all 250ms ease-in-out;
+  font-weight: 500;
+}
+.form .form-group input &:focus {
+  outline: none;
+  box-shadow: 0rem 0rem 0.5rem 0.1rem #9adfca;
+}
+.footer {
+  margin-top: 1rem;
+}
+.btn {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 2rem;
+  background: rgb(254, 254, 254);
+  cursor: pointer;
+  letter-spacing: 0.05rem;
+}
+.btn::after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(44, 132, 232);
+  left: 0;
+  top: 0;
+  border-radius: 1rem;
+}
+
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    rgb(255, 0, 0),
+    rgb(255, 115, 0),
+    rgb(255, 251, 0),
+    rgb(72, 255, 0),
+    rgb(0, 255, 213),
+    rgb(0, 0, 255),
+    rgb(255, 0, 200),
+    rgb(255, 0, 0)
+  );
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  right: -0.25rem;
+  bottom: -0.25rem;
+  background-size: 400%;
+  z-index: -2;
+  filter: blur(1rem);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 4rem;
+  opacity: 0.5;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active::after {
+  background: transparent;
+}
+.error-message {
+  color: rgba(210, 145, 145, 0.99);
+  font-size: 0.79rem;
+  width: 15rem;
+}
+
+@media (max-width: 1024px) {
+  .base-container {
+    top: 3rem;
+  }
+
+  .form .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 8rem;
+    font-size: 0.9rem;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.75rem;
+  }
+
+  .base-container {
+    top: 3rem;
+    padding: 0.5rem;
+  }
+
+  .form-group input {
+    width: 100%;
+  }
+
+  .btn {
+    width: 8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .base-container {
+    top: 2rem;
+    padding: 0.5rem;
+  }
+
+  .logo {
+    width: 7rem;
+  }
+
+  .form-group {
+    max-width: 100%;
+  }
+
+  .form-group input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,233 @@
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.flat-card {
+  border: 1.5px solid rgb(204, 204, 204);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2rem);
+  margin: 1rem auto;
+  max-width: 90%;
+}
+
+.flat-card td {
+  padding: 0.8rem;
+  border-bottom: 2px solid rgb(11, 11, 11);
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+
+.back-button {
+  display: block;
+  margin-top: 1.2rem;
+  text-align: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: rgb(42, 129, 82);
+  margin-top: 1.2rem;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 10rem;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: rgb(11, 195, 112);
+}
+
+.back-button img {
+  width: 3rem;
+  max-width: 100%;
+}
+
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.message-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.message-container ul li {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  position: relative;
+}
+
+.message-container ul li em {
+  font-style: italic;
+  color: #555;
+}
+
+.message-container ul li ul {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.message-container ul li ul li {
+  background-color: #e8e8e8;
+}
+
+.message-container ul li ul li p {
+  margin: 0;
+}
+.message-input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.message-input,
+.reply-container {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.message-input textarea,
+.reply-container textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.message-input .btnx-submit,
+.reply-container .btnx-submit {
+  margin-top: 0.5rem;
+  width: auto;
+  max-width: 200px;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.message-input .btnx-submit{
+  margin-bottom:0.5rem;
+}
+.message-input .btnx-submit:hover,
+.reply-container .btnx-submit:hover {
+  background-color: #0056b3;
+}
+
+.btnx-submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.message-container p {
+  margin: 0.5rem 0;
+}
+
+.reply-container {
+  margin-top: 1rem;
+}
+
+.reply-container textarea {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .flat-card {
+    padding: 0.8rem;
+    max-width: 95%;
+  }
+
+  .flat-card td {
+    font-size: 1.2rem;
+  }
+
+  .btn-edit {
+    width: 8rem;
+  }
+
+  .message-input textarea,
+  .reply-container textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .flat-card {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+
+  .message-input textarea,
+  .reply-container textarea {
+    max-width: 40%;
+  }
+
+  .message-input .btnx-submit,
+  .reply-container .btnx-submit {
+    width: 40%;
+  }
+
+  .btn-edit {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .flat-card td {
+    font-size: 1rem;
+  }
+
+  .btn-edit {
+    padding: 0.5rem;
+  }
+.message-container{
+  max-width: 30%;
+}
+  .message-container ul li {
+    padding: 0.3rem;
+  }
+  .message-input textarea,
+  .reply-container textarea {
+    max-width: 100%;
+  }
+
+  .message-input .btnx-submit,
+  .reply-container .btnx-submit {
+    width: 100%;
+  }
+
+}

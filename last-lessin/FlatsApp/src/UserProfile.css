@@ -1,0 +1,97 @@
+.user-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+  
+  .profile-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(2rem);
+    font-size: 1.8rem;
+  }
+  
+  .user-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .user-card {
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    backdrop-filter: blur(2rem);
+    color:white;
+    text-align:center;
+  }
+  
+
+  @media (max-width: 1024px) {
+    .profile-card {
+      max-width: 70%; 
+      font-size: 1.6rem;
+    }
+  
+    .user-card {
+      max-width: 25%; 
+    }
+  
+    .user-container {
+      gap: 1rem;
+      padding: 0 10px;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .profile-card {
+      max-width: 80%;
+      font-size: 1.6rem;
+    }
+  
+    .user-card {
+      max-width: 35%;
+    }
+  
+    .user-container {
+      gap: 1rem;
+      padding: 0 10px;
+    }
+  }
+  
+
+  @media (max-width: 425px) {
+    .profile-card {
+      font-size: 1.4rem;
+      padding: 1rem;
+      max-width: 100%;
+    }
+  
+    .user-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .user-card {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .user-card p {
+      font-size: 1rem;
+    }
+  }
